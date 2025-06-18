@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AR Tegal</title>
+  <link rel="stylesheet" href="../style.css"/>
+  <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+</head>
+<body>
+  <button id="deskripsiBtn">Deskripsi</button>
+  <div id="deskripsiText" style="display: none; max-width: 300px; padding: 10px; background: #333d29; position: fixed; top: 70px; right: 10px; z-index: 10; color: white;"></div>
+
+  <div class="zoom-controls">
+  <button onclick="zoomModel(0.2)">Zoom In</button>
+  <button onclick="zoomModel(-0.2)">Zoom Out</button>
+</div>
+
+  <a-scene mindar-image="imageTargetSrc: ../../assets/marker/markertegal.mind"
+           color-space="sRGB"
+           renderer="colorManagement: true, physicallyCorrectLights"
+           vr-mode-ui="enabled: false"
+           device-orientation-permission-ui="enabled: false">
+
+    <a-assets>
+      <a-asset-item id="bongkok_model" src="../assets/model/bongkok.glb"></a-asset-item>
+      <a-asset-item id="glabed_model" src="../assets/model/glabed.glb"></a-asset-item>
+      <a-asset-item id="adep_model" src="../assets/model/adepp.glb"></a-asset-item>
+      <a-asset-item id="alu_model" src="../assets/model/alualu.glb"></a-asset-item>
+      <a-asset-item id="glotak_model" src="../assets/model/glotak.glb"></a-asset-item>
+      <a-asset-item id="ketan_model" src="../assets/model/gemblongKetan.glb"></a-asset-item>
+      <a-asset-item id="lengko_model" src="../assets/model/lengko.glb"></a-asset-item>
+      <a-asset-item id="olos_model" src="../assets/model/olos.glb"></a-asset-item>
+      <a-asset-item id="sauto_model" src="../assets/model/sauto.glb"></a-asset-item>
+      <a-asset-item id="tahuaci_model" src="../assets/model/tahuaci.glb"></a-asset-item>
+    </a-assets>
+
+    <a-entity light="type: directional; intensity: 1; color: #ffffff" position="1 1 0.5"></a-entity>
+
+    <!-- Entity per makanan khas -->
+    <a-entity id="ent-adep" mindar-image-target="targetIndex: 0">
+      <a-gltf-model id="model-adep" 
+      gltf-model="#adep_model" 
+      position="0 0 0" 
+      scale="8 8 8" 
+      rotation="45 0 0"></a-gltf-model>
+    </a-entity>
+
+    <a-entity id="ent-alu" mindar-image-target="targetIndex: 1">
+      <a-gltf-model id="model-alu" 
+      gltf-model="#alu_model" 
+      position="0 0 0" 
+      scale="1 1 1" 
+      rotation="45 0 0"></a-gltf-model>
+    </a-entity>
+
+    <a-entity id="ent-bongkok" mindar-image-target="targetIndex: 2">
+      <a-gltf-model id="model-bongkok" 
+      gltf-model="#bongkok_model" 
+      position="0 0 0" 
+      scale="1 1 1" 
+      rotation="45 0 0"></a-gltf-model>
+    </a-entity>
+
+    <a-entity id="ent-glabed" mindar-image-target="targetIndex: 3">
+      <a-gltf-model id="model-glabed" 
+      gltf-model="#glabed_model" 
+      position="0 0 0" 
+      scale="1 1 1" 
+      rotation="45 0 0"></a-gltf-model>
+    </a-entity>
+
+    <a-entity id="ent-glotak" mindar-image-target="targetIndex: 4">
+      <a-gltf-model id="model-glotak" 
+      gltf-model="#glotak_model" 
+      position="0 0 0" 
+      scale="1 1 1" 
+      rotation="45 0 0"></a-gltf-model>
+    </a-entity>
+
+    <a-entity id="ent-ketan" mindar-image-target="targetIndex: 5">
+      <a-gltf-model id="model-ketan" 
+      gltf-model="#ketan_model" 
+      position="0 0 0" 
+      scale="1 1 1" 
+      rotation="45 0 0"></a-gltf-model>
+    </a-entity>
+
+    <a-entity id="ent-lengko" mindar-image-target="targetIndex: 6">
+      <a-gltf-model id="model-lengko" 
+      gltf-model="#lengko_model" 
+      position="0 0 0" 
+      scale="2 2 2" 
+      rotation="100 0 0"></a-gltf-model>
+    </a-entity>
+
+    <a-entity id="ent-olos" mindar-image-target="targetIndex: 7">
+      <a-gltf-model id="model-olos"
+       gltf-model="#olos_model" 
+       position="0 0 0" 
+       scale="1 1 1" 
+       rotation="45 0 0"></a-gltf-model>
+    </a-entity>
+
+    <a-entity id="ent-sauto" mindar-image-target="targetIndex: 8">
+      <a-gltf-model id="model-sauto" 
+      gltf-model="#sauto_model" 
+      position="0 0 0" 
+      scale="1 1 1" 
+      rotation="45 0 0"></a-gltf-model>
+    </a-entity>
+
+    <a-entity id="ent-tahuaci" mindar-image-target="targetIndex: 9">
+      <a-gltf-model id="model-tahuaci" 
+      gltf-model="#tahuaci_model" 
+      position="0 0 0" 
+      scale="1 1 1" 
+      rotation="45 0 0"></a-gltf-model>
+    </a-entity>
+
+    <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+  </a-scene>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
