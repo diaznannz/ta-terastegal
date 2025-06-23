@@ -14,7 +14,7 @@ body {
 
 /* Navigation Bar */
 nav {
-    background-color: #333d29;
+    background-color: #0095ff;
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
@@ -80,46 +80,6 @@ nav {
     animation: fadeInDown 1s ease forwards;
 }
 
-.hero .highlight {
-    animation: neonAR 3s infinite;
-    color: #ccff00;
-    text-shadow:
-        0 0 5px #ccff00,
-        0 0 10px #ccff00,
-        0 0 20px #ccff00,
-        0 0 40px #194a37,
-        0 0 80px #00ffcc;
-}
-
-@keyframes neonAR {
-    0%, 100% {
-        color: #ccff00;
-        text-shadow:
-            0 0 5px #ccff00,
-            0 0 10px #ccff00,
-            0 0 20px #ccff00,
-            0 0 40px #194a37;
-    }
-
-    33% {
-        color: #00ff44;
-        text-shadow:
-            0 0 5px #00ff44,
-            0 0 10px #00ff44,
-            0 0 20px #00ff44,
-            0 0 40px #ff8800;
-    }
-
-    66% {
-        color: #00ffbf;
-        text-shadow:
-            0 0 5px #00ffbf,
-            0 0 10px #00ffbf,
-            0 0 20px #00ffbf,
-            0 0 40px #7a33ff;
-    }
-}
-
 @keyframes fadeInDown {
     0% {
         opacity: 0;
@@ -133,7 +93,7 @@ nav {
 
 /* Tombol Mulai */
 .start-button {
-    background: linear-gradient(45deg, #00eeff, #15394c);
+    background: linear-gradient(45deg, #0080ff, #0080ff);
     color: white;
     padding: 1.2rem 3.5rem;
     border: none;
@@ -148,8 +108,8 @@ nav {
 
 .start-button:hover,
 .start-button:focus {
-    background: linear-gradient(45deg, #0ad1c7, #0f671f);
-    box-shadow: 0 6px 25px #6ba8e4;
+    background: linear-gradient(45deg, #0080ff, #0080ff);
+    box-shadow: 0 6px 25px #0080ff;
     transform: scale(1.05);
 }
 
@@ -164,22 +124,22 @@ nav {
 }
 
 .zoom-controls button {
-    background-color: #333d29;
+    background-color: #0080ff;
     border: none;
     padding: 12px 18px;
     border-radius: 50px;
     color: white;
     font-size: 16px;
     cursor: pointer;
-    box-shadow: 0 4px 8px #333d29;
+    box-shadow: 0 4px 8px #000000;
     transition: background-color 0.3s ease, transform 0.2s ease;
     font-weight: 600;
 }
 
 .zoom-controls button:hover {
-    background-color: #333d29;
+    background-color: #0080ff;
     transform: scale(1.1);
-    box-shadow: 0 6px 12px #333d29;
+    box-shadow: 0 6px 12px #000000;
 }
 
 .zoom-controls button:active {
@@ -195,7 +155,7 @@ nav {
     transform: translateX(-50%);
     padding: 12px 20px;
     font-size: 16px;
-    background-color: #333d29;
+    background-color: #0080ff;
     color: white;
     border: none;
     border-radius: 50px;
@@ -205,7 +165,7 @@ nav {
 }
 
 #deskripsiBtn:hover {
-    background-color: #38541d;
+    background-color: #0080ff;
 }
 
 #deskripsiText {
@@ -214,7 +174,7 @@ nav {
     left: 50%;
     transform: translateX(-50%);
     padding: 10px 15px;
-    background: #333d29;
+    background: #0080ff;
     color: #fff;
     border-radius: 6px;
     display: none;
@@ -227,7 +187,7 @@ nav {
 
 /* Konten lainnya */
 .instructions {
-    background-color: #333d29;
+    background-color: #0080ff;
     font-size: 1rem;
     font-weight: bold;
     padding: 20px;
