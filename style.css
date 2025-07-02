@@ -147,67 +147,45 @@ nav {
     box-shadow: 0 2px 5px #9ddc5d;
 }
 
-/* Tombol Deskripsi */
+/* Deskripsi Button dan Text */
 #deskripsiBtn {
     position: absolute;
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
-    padding: 12px 24px;
+    padding: 12px 20px;
     font-size: 16px;
-    font-weight: 600;
-    background: linear-gradient(to right, #007bff, #00b4ff);
+    background-color: #0080ff;
     color: white;
     border: none;
-    border-radius: 30px;
+    border-radius: 50px;
     cursor: pointer;
     z-index: 9999;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease;
 }
 
 #deskripsiBtn:hover {
-    background: linear-gradient(to right, #005eff, #00a8ff);
+    background-color: #0080ff;
 }
 
-/* Tampilan UI Deskripsi */
 #deskripsiText {
     position: absolute;
     top: 80px;
     left: 50%;
     transform: translateX(-50%);
-    max-width: 85%;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    color: #333;
+    padding: 10px 15px;
+    background: #0080ff;
+    color: #fff;
     border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     display: none;
     z-index: 9999;
+    text-align: center;
+    max-width: 90%;
     font-size: 1rem;
-    line-height: 1.6;
-    text-align: left;
-    transition: all 0.3s ease;
+    line-height: 1.4;
 }
 
-#deskripsiText.show {
-    display: block;
-    animation: fadeInUp 0.4s ease-out;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Petunjuk */
+/* Konten lainnya */
 .instructions {
     background-color: #0080ff;
     font-size: 1rem;
